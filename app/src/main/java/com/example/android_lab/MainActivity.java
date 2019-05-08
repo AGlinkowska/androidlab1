@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //todo
 
-        String[] values = new String[] {"antylopa", "bóbr", "czapla", "delfin", "elephant", "foka"};
+        String[] values = new String[] { "Pies",
+                "Kot", "Koń", "Gołąb", "Kruk", "Dzik", "Karp",
+                "Osioł", "Chomik", "Mysz", "Jeż", "Kraluch"};
         this.target = new ArrayList<String>();
         this.target.addAll(Arrays.asList(values));
 
-        this.adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, this.target);
+        this.adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, this.target);
         ListView listview = (ListView)findViewById(R.id.listView);
-        listview.setAdapter((this.adapter));
+        listview.setAdapter(this.adapter);
     }
 
     @Override
