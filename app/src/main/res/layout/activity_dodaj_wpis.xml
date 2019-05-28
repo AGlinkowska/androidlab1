@@ -6,19 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".DodajWpis">
 
+    <Spinner
+        android:id="@+id/gatunek"
+        android:layout_width="214dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/kolor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
+        android:hint="Kolor"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gatunek" />
+
+    <EditText
+        android:id="@+id/wielkosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Wielkość"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kolor" />
+
+    <EditText
+        android:id="@+id/opis"
+        android:layout_width="214dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Opis"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wielkosc" />
 
     <Button
         android:id="@+id/button"
@@ -26,11 +65,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="139dp"
-        android:text="Button"
+        android:layout_marginBottom="68dp"
         android:onClick="wyslij"
+        android:text="Dodaj"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="229dp"
+        android:layout_marginBottom="72dp"
+        android:text="Dodawanie nowego zwierzęcia"
+        app:layout_constraintBottom_toTopOf="@+id/gatunek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
